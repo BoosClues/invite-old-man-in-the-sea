@@ -17,6 +17,7 @@
 @keyframes dodoPulse{0%,100%{box-shadow:0 2px 0 #8E1610, 0 6px 14px rgba(0,0,0,.28);}50%{box-shadow:0 2px 0 #8E1610, 0 10px 22px rgba(255,59,48,.45);}}
 @keyframes dodoArrow{0%,100%{transform:translateX(0);}50%{transform:translateX(4px);}}
 html,body{margin:0;padding:0;background:#050f14;color:#cfdcd6;}
+:root{--net-x:clamp(22px,3.6vw,58px);}
 *{box-sizing:border-box;}
 a{color:#8fbfa8;text-decoration:none;}
 a:hover{color:#c8352c;}
@@ -33,10 +34,11 @@ input::placeholder{color:#4d6a68;}
 *{-webkit-tap-highlight-color:rgba(200,53,44,.25);}
 
 @media (max-width:759px){
-  #netrail{width:62px !important;right:18px !important;}
+  :root{--net-x:18px;}
+  #netrail{width:62px !important;right:var(--net-x) !important;}
   #netpod{width:62px !important;height:90px !important;}
   #netpod img{width:62px !important;height:90px !important;}
-  #boatberth{width:62px !important;left:auto !important;right:42px !important;bottom:6px !important;padding-right:0 !important;}
+  #boatberth{width:62px !important;left:auto !important;right:calc(var(--net-x) + 24px) !important;bottom:6px !important;padding-right:0 !important;}
   #hdr-band{padding:18px 18px 25px !important;justify-content:flex-start !important;}
   #hdr-band > a{font-size:28px !important;padding-right:66px;}
   #hdr-water{height:20px !important;}
@@ -54,7 +56,7 @@ html{scroll-behavior:smooth;}
 
 <div id="page" style="position:relative;width:100%;overflow-x:hidden;background:#050f14;font-family:Georgia,'Times New Roman',serif;">
 
-<div id="netrail" aria-hidden="true" style="position:fixed;top:0;right:clamp(22px,3.6vw,58px);bottom:0;width:66px;z-index:15;pointer-events:none;opacity:0;transition:opacity .6s ease;">
+<div id="netrail" aria-hidden="true" style="position:fixed;top:0;right:var(--net-x);bottom:0;width:66px;z-index:15;pointer-events:none;opacity:0;transition:opacity .6s ease;">
   <div id="netrope" style="position:absolute;left:50%;top:0;width:3px;height:0;margin-left:-1.5px;background:linear-gradient(90deg,#241a10,#8a6a45 45%,#4a3620);box-shadow:0 0 10px rgba(0,0,0,.55);transition:height .72s cubic-bezier(.34,.86,.3,1);"></div>
   <div id="netpod" title="The catch" style="position:absolute;left:0;top:0;width:66px;height:95px;pointer-events:none;transition:top .72s cubic-bezier(.34,.86,.3,1);animation:sway 6.5s ease-in-out infinite;transform-origin:50% 0;filter:drop-shadow(0 12px 18px rgba(0,0,0,.6));">
     <img data-net="0" src="assets/net-1.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:1;transition:opacity .5s ease;">
@@ -82,7 +84,7 @@ html{scroll-behavior:smooth;}
     
   <div id="hdr-water" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:26px;background-image:url('assets/ocean-strip.png');background-repeat:no-repeat;background-size:100% 100%;background-position:center top;"></div>
 
-  <div id="boatberth" style="position:absolute;z-index:6;left:auto;right:clamp(48px,6.4vw,86px);bottom:4px;width:66px;line-height:0;">
+  <div id="boatberth" style="position:absolute;z-index:6;left:auto;right:calc(var(--net-x) + 26px);bottom:4px;width:66px;line-height:0;">
     <img id="trawler-hdr" src="assets/trawler-boat.png" alt="Drop the net — open the menu" title="Drop the net" onClick="{{ boatSequence }}" style="position: relative; z-index: 2; width: 100%; height: auto; display: block; cursor: pointer; transform: scaleX(-1); transform-origin: center; animation: bob 7s ease-in-out infinite; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)) saturate(.9) brightness(.94); margin-right: 0px; opacity: 1; top: 0px">
     
     <div id="boat-splash" aria-hidden="true" style="position:absolute;right:2%;bottom:-6px;z-index:4;width:44px;height:18px;border-radius:50%;background:radial-gradient(closest-side, rgba(230,245,238,.95), rgba(230,245,238,0) 72%);opacity:0;transform:scale(.4);transition:opacity .45s ease, transform .48s ease;pointer-events:none;"></div>
@@ -143,10 +145,7 @@ html{scroll-behavior:smooth;}
   </div>
 </section>
 
-<section id="beware" style="position: relative; padding: clamp(56px,9vw,120px) max(20px,6vw); background: #0d2630; border-top: 1px solid rgba(143,191,168,.12); overflow: hidden; height: 570px">
-  <div data-par="0.12" style="position:absolute;right:-6%;top:-14%;width:min(560px,70vw);opacity:.08;mix-blend-mode:screen;will-change:transform;-webkit-mask-image:radial-gradient(58% 58% at 50% 45%, #000 12%, transparent 100%);mask-image:radial-gradient(58% 58% at 50% 45%, #000 12%, transparent 100%);pointer-events:none;">
-    <img src="assets/quoth-deep-sea.png" alt="" style="width:100%;display:block;filter:grayscale(1) contrast(1.2);">
-  </div>
+<section id="beware" style="position: relative; padding: clamp(56px,9vw,120px) max(20px,6vw); background: #0d2630; border-top: 1px solid rgba(143,191,168,.12); overflow: hidden;">
   <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,64px);align-items:center;">
     <div class="rv">
       <p style="margin:0 0 14px;font-family:'Courier New',monospace;font-size:19px;letter-spacing:.3em;text-transform:uppercase;color:#8fbfa8;">Sailors Beware!</p>
@@ -157,17 +156,18 @@ html{scroll-behavior:smooth;}
       <a href="The Game.dc.html" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:19px 28px;min-height:56px;background:#c8352c;border:1px solid #e0554a;color:#f3ece0;font-family:'Courier New',monospace;font-size:13px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;" style-hover="background:#a52a22;">Read the rules →</a>
       <p style="margin:0;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.14em;line-height:1.8;color:#8fbfa8;">Participation is non-negotiable.</p>
     </div>
-  </div><div style="position: absolute; top: 429px; font-family: Playfair Display; font-size: 20px; color: #E0554A; text-transform: uppercase; left: 58px; width: 717px; height: 8px; line-height: 1.6; font-style: italic; letter-spacing: .07em">All in attendance must bring a ghost sheet in the event of their untimely demise.</div>
-<div style="font-size: 13px; line-height: 1; font-family: 'Courier New', monospace; letter-spacing: .3em; text-transform: uppercase; color: #8fbfa8; position: absolute; left: 52px; top: 399px">*Take heed!</div></section>
+  </div>
+  <div class="rv" style="position:relative;max-width:1180px;margin:clamp(28px,4vw,50px) auto 0;padding-top:clamp(22px,3.5vw,34px);border-top:1px solid rgba(143,191,168,.18);">
+    <p style="margin:0 0 8px;font-family:'Courier New',monospace;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:#8fbfa8;">*Take heed!</p>
+    <p style="margin:0;font-family:'Playfair Display',Georgia,serif;font-size:clamp(16px,2vw,20px);letter-spacing:.03em;line-height:1.5;font-style:italic;color:#e0554a;text-wrap:pretty;">All in attendance must bring a ghost sheet in the event of their untimely demise.</p>
+  </div>
+</section>
 
 
 
 
 
 <section style="position:relative;padding:clamp(58px,10vw,150px) max(20px,6vw);background:#071a20;overflow:hidden;border-top:1px solid rgba(143,191,168,.12);">
-  <div data-par="0.18" style="position:absolute;left:50%;top:-8%;transform:translateX(-50%);width:min(900px,92vw);opacity:.1;mix-blend-mode:screen;will-change:transform;-webkit-mask-image:radial-gradient(60% 60% at 50% 45%, #000 15%, transparent 100%);mask-image:radial-gradient(60% 60% at 50% 45%, #000 15%, transparent 100%);">
-    <img src="assets/bluefin.png" alt="" style="width:100%;display:block;filter:grayscale(1) contrast(1.2);">
-  </div>
   <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(28px,4vw,64px);align-items:start;">
     <div class="rv">
       <h3 style="margin:0 0 18px;font-family:'NeulandInline',Georgia,serif;font-weight:400;font-size:clamp(22px,2.8vw,38px);line-height:1.05;color:#e6efe6;">Costumes are a yes</h3>
@@ -182,7 +182,7 @@ html{scroll-behavior:smooth;}
   <a href="Resort Shirts.dc.html" style="display:block;flex:0 1 340px;width:100%;max-width:340px;aspect-ratio:320/480;position:relative;overflow:hidden;background:#F3EDE0;box-shadow:0 24px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.35);text-decoration:none;transition:transform .25s ease;" style-hover="transform:translateY(-4px);">
     <div style="position:absolute;inset:0;border:6px solid #F3EDE0;outline:1px solid rgba(255,59,48,.55);outline-offset:-7px;pointer-events:none;z-index:6;"></div>
     <div style="position:absolute;top:0;left:0;right:0;height:61%;overflow:hidden;background:#DDE3E0;">
-      <img src="assets/dodo-ad-yacht.png" alt="Couple in DODO resort shirts aboard a sailing yacht" style="width:100%;height:100%;object-fit:cover;object-position:34% 62%;display:block;filter:saturate(1.02) contrast(1.02);">
+      <img loading="lazy" decoding="async" src="assets/dodo-ad-yacht.png" alt="Couple in DODO resort shirts aboard a sailing yacht" style="width:100%;height:100%;object-fit:cover;object-position:34% 62%;display:block;filter:saturate(1.02) contrast(1.02);">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(243,237,224,.45) 0%, rgba(243,237,224,0) 26%, rgba(243,237,224,0) 74%, rgba(243,237,224,.92) 100%);"></div>
       <div style="position:absolute;top:14px;right:14px;text-align:right;font-size:7px;letter-spacing:.34em;text-transform:uppercase;color:#1F3A46;line-height:1.9;text-shadow:0 1px 2px rgba(243,237,224,.8);">New<br>Selections</div>
     </div>

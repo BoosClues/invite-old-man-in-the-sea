@@ -59,10 +59,10 @@ html{scroll-behavior:smooth;}
 <div id="netrail" aria-hidden="true" style="position:fixed;top:0;right:var(--net-x);bottom:0;width:66px;z-index:15;pointer-events:none;opacity:0;transition:opacity .6s ease;">
   <div id="netrope" style="position:absolute;left:50%;top:0;width:3px;height:0;margin-left:-1.5px;background:linear-gradient(90deg,#241a10,#8a6a45 45%,#4a3620);box-shadow:0 0 10px rgba(0,0,0,.55);transition:height .72s cubic-bezier(.34,.86,.3,1);"></div>
   <div id="netpod" title="The catch" style="position:absolute;left:0;top:0;width:66px;height:95px;pointer-events:none;transition:top .72s cubic-bezier(.34,.86,.3,1);animation:sway 6.5s ease-in-out infinite;transform-origin:50% 0;filter:drop-shadow(0 12px 18px rgba(0,0,0,.6));">
-    <img data-net="0" src="assets/net-1.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:1;transition:opacity .5s ease;">
-    <img data-net="1" src="assets/net-2.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:0;transition:opacity .5s ease;">
-    <img data-net="2" src="assets/net-3.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:0;transition:opacity .5s ease;">
-    <img data-net="3" src="assets/net-floor.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:0;transition:opacity .5s ease;">
+    <img data-net="0" src="assets/net-1-sm.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:1;transition:opacity .5s ease;">
+    <img data-net="1" src="assets/net-2-sm.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:0;transition:opacity .5s ease;">
+    <img data-net="2" src="assets/net-3-sm.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:0;transition:opacity .5s ease;">
+    <img data-net="3" src="assets/net-floor-sm.png" alt="" style="position:absolute;top:0;left:0;width:66px;height:95px;object-fit:contain;object-position:top center;opacity:0;transition:opacity .5s ease;">
   </div>
 </div>
 
@@ -77,18 +77,18 @@ html{scroll-behavior:smooth;}
 
 
 
-<header id="sitehdr" style="position:fixed;top:0;left:0;right:0;z-index:20;background:#eceae4 url('./ocean-menu-mtlkksfe-9506.png') center 88% / cover no-repeat;border-bottom:0;overflow:hidden;">
+<header id="sitehdr" style="position:fixed;top:0;left:0;right:0;z-index:20;background:#eceae4 url('./ocean-menu.jpg') center 88% / cover no-repeat;border-bottom:0;overflow:hidden;">
   
 <div id="hdr-band" style="max-width:1180px;margin:0 auto;padding:22px max(18px,6vw) 26px;display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;justify-content:space-between;background-color:#eceae4;position:relative;">
     <a href="#rsvp-form" style="font-family: NeulandInline; font-size: clamp(22px,2.6vw,32px); line-height: 1; color: #c8352c; text-shadow: 0 1px 0 rgba(255,255,255,.9)" style-hover="color:#e0554a;">You're Invited</a>
     
-  <div id="hdr-water" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:26px;background-image:url('assets/ocean-strip.png');background-repeat:no-repeat;background-size:100% 100%;background-position:center top;"></div>
+  <div id="hdr-water" aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:26px;background-image:url('assets/ocean-strip-sm.png');background-repeat:no-repeat;background-size:100% 100%;background-position:center top;"></div>
 
   <div id="boatberth" style="position:absolute;z-index:6;left:auto;right:calc(var(--net-x) + 26px);bottom:4px;width:66px;line-height:0;">
-    <img id="trawler-hdr" src="assets/trawler-boat.png" alt="Drop the net — open the menu" title="Drop the net" onClick="{{ boatSequence }}" style="position: relative; z-index: 2; width: 100%; height: auto; display: block; cursor: pointer; transform: scaleX(-1); transform-origin: center; animation: bob 7s ease-in-out infinite; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)) saturate(.9) brightness(.94); margin-right: 0px; opacity: 1; top: 0px">
+    <img id="trawler-hdr" src="assets/trawler-boat-sm.png" alt="Drop the net — open the menu" title="Drop the net" onClick="{{ boatSequence }}" style="position: relative; z-index: 2; width: 100%; height: auto; display: block; cursor: pointer; transform: scaleX(-1); transform-origin: center; animation: bob 7s ease-in-out infinite; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)) saturate(.9) brightness(.94); margin-right: 0px; opacity: 1; top: 0px">
     
     <div id="boat-splash" aria-hidden="true" style="position:absolute;right:2%;bottom:-6px;z-index:4;width:44px;height:18px;border-radius:50%;background:radial-gradient(closest-side, rgba(230,245,238,.95), rgba(230,245,238,0) 72%);opacity:0;transform:scale(.4);transition:opacity .45s ease, transform .48s ease;pointer-events:none;"></div>
-    <img id="trawler-dropped" src="assets/trawler-boat-dropped.png" alt="" aria-hidden="true" style="position: absolute; top: 0px; left: 3px; z-index: 3; width: 100%; height: auto; display: block; pointer-events: none; transform: scaleX(-1); transform-origin: center; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)) saturate(.9) brightness(.94); opacity: 0">
+    <img id="trawler-dropped" src="assets/trawler-boat-dropped-sm.png" alt="" aria-hidden="true" style="position: absolute; top: 0px; left: 3px; z-index: 3; width: 100%; height: auto; display: block; pointer-events: none; transform: scaleX(-1); transform-origin: center; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)) saturate(.9) brightness(.94); opacity: 0">
   </div></div></header>
 <div id="hdr-spacer" aria-hidden="true" style="height:80px;"></div>
 
@@ -98,7 +98,7 @@ html{scroll-behavior:smooth;}
 
 <section id="top" style="position: relative; margin-top: -1px; background: #050f14; padding: 0 0 clamp(46px,6vw,86px)">
   <div style="position: relative; width: 100%; min-height: clamp(520px,78svh,760px); display: flex; align-items: flex-end; overflow: hidden">
-    <div data-par="0.28" style="position:absolute;inset:-26% 0 -12% 0;background-image:url('assets/quoth-deep-sea.png');background-size:cover;background-position:center;will-change:transform;"></div>
+    <div data-par="0.28" style="position:absolute;inset:-26% 0 -12% 0;background-image:url('assets/hero-deep.jpg');background-size:cover;background-position:center;will-change:transform;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,15,20,.35) 0%, rgba(5,15,20,0) 34%, rgba(5,15,20,.45) 74%, rgba(5,15,20,.92) 100%);pointer-events:none;"></div>
     <div style="position:absolute;left:-10%;right:-10%;top:14%;height:52%;background:radial-gradient(60% 50% at 30% 50%, rgba(143,191,168,.10), rgba(0,0,0,0) 70%);animation:drift 26s ease-in-out infinite;pointer-events:none;"></div>
 
@@ -182,7 +182,7 @@ html{scroll-behavior:smooth;}
   <a href="Resort Shirts.dc.html" style="display:block;flex:0 1 340px;width:100%;max-width:340px;aspect-ratio:320/480;position:relative;overflow:hidden;background:#F3EDE0;box-shadow:0 24px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.35);text-decoration:none;transition:transform .25s ease;" style-hover="transform:translateY(-4px);">
     <div style="position:absolute;inset:0;border:6px solid #F3EDE0;outline:1px solid rgba(255,59,48,.55);outline-offset:-7px;pointer-events:none;z-index:6;"></div>
     <div style="position:absolute;top:0;left:0;right:0;height:61%;overflow:hidden;background:#DDE3E0;">
-      <img loading="lazy" decoding="async" src="assets/dodo-ad-yacht.png" alt="Couple in DODO resort shirts aboard a sailing yacht" style="width:100%;height:100%;object-fit:cover;object-position:34% 62%;display:block;filter:saturate(1.02) contrast(1.02);">
+      <img loading="lazy" decoding="async" src="assets/dodo-ad-yacht.jpg" alt="Couple in DODO resort shirts aboard a sailing yacht" style="width:100%;height:100%;object-fit:cover;object-position:34% 62%;display:block;filter:saturate(1.02) contrast(1.02);">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(243,237,224,.45) 0%, rgba(243,237,224,0) 26%, rgba(243,237,224,0) 74%, rgba(243,237,224,.92) 100%);"></div>
       <div style="position:absolute;top:14px;right:14px;text-align:right;font-size:7px;letter-spacing:.34em;text-transform:uppercase;color:#1F3A46;line-height:1.9;text-shadow:0 1px 2px rgba(243,237,224,.8);">New<br>Selections</div>
     </div>
@@ -228,13 +228,21 @@ html{scroll-behavior:smooth;}
           <div class="rv" style="{{ item.cardStyle }}">
             <p style="margin:0 0 12px;font-family:'Courier New',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:{{ item.tagColor }};">{{ item.remainLabel }}</p>
             <p style="margin:0 0 10px;font-family:'NeulandInline',Georgia,serif;font-size:clamp(16px,1.7vw,20px);line-height:1.2;color:#e6efe6;">{{ item.name }}</p>
-            <p style="margin:0 0 20px;font-size:15px;line-height:1.6;color:#a9c2b8;text-wrap:pretty;">{{ item.line }}</p>
+            <p style="{{ item.lineStyle }}">{{ item.line }}</p>
             <button type="button" onClick="{{ item.onClaim }}" disabled="{{ item.disabled }}" style="{{ item.btnStyle }}" style-hover="{{ item.btnHover }}">{{ item.btnLabel }}</button>
+            <sc-if value="{{ item.swornOut }}" hint-placeholder-val="{{ false }}">
+              <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;display:grid;place-items:center;background:radial-gradient(68% 58% at 50% 48%, rgba(7,19,25,.94) 0 52%, rgba(7,19,25,.55) 78%, rgba(7,19,25,0) 100%);">
+                <div style="display:grid;place-items:center;gap:8px;padding:10px 14px;transform:rotate(-11deg);">
+                  <img src="assets/stamp-fish.png" alt="" style="display:block;width:min(260px,88%);height:auto;">
+                  <span style="font-family:'Courier New',monospace;font-weight:700;font-size:clamp(17px,2vw,21px);letter-spacing:.2em;text-transform:uppercase;color:#f0685c;white-space:nowrap;">Gone fishing</span>
+                </div>
+              </div>
+            </sc-if>
           </div>
         </sc-for>
       </div>
 
-      <p class="rv" style="margin:30px 0 0;text-align:center;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.14em;line-height:1.8;color:#6d8f88;">One claim per soul — it goes on your RSVP below. If the count looks wrong, text <a href="sms:17348902092" style="color:#c8352c;">734-890-2092</a>.</p>
+      <p class="rv" style="margin:30px 0 0;text-align:center;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.14em;line-height:1.8;color:#6d8f88;">One claim per soul...</p>
     </div>
 
     <h2 id="rsvp-form" class="rv" style="margin:0 0 14px;text-align:center;font-family:'NeulandInline',Georgia,serif;font-weight:400;font-size:clamp(32px,5.4vw,72px);line-height:1;color:#e6efe6;scroll-margin-top:90px;">RSVP</h2>
@@ -294,7 +302,7 @@ html{scroll-behavior:smooth;}
 
 <section id="log" data-depth="1" style="position: relative; padding: clamp(56px,9vw,130px) max(20px,6vw); background: #071a20; border-top: 1px solid rgba(143,191,168,.12); overflow: hidden; min-height: 320px">
   <div data-par="-0.12" style="position:absolute;right:-6%;top:-10%;width:min(620px,58vw);opacity:.16;mix-blend-mode:screen;will-change:transform;-webkit-mask-image:radial-gradient(65% 65% at 50% 45%, #000 20%, transparent 100%);mask-image:radial-gradient(65% 65% at 50% 45%, #000 20%, transparent 100%);">
-    <img src="assets/trawler.png" alt="" style="width:100%;display:block;filter:grayscale(1) contrast(1.25);">
+    <img loading="lazy" decoding="async" src="assets/trawler.jpg" alt="" style="width:100%;display:block;filter:grayscale(1) contrast(1.25);">
   </div>
   <div class="rv" style="position:relative;max-width:760px;">
     
@@ -319,6 +327,8 @@ class Component extends DCLogic {
     { id: "shirt", name: "Dodo Aloha resort shirt", line: "Not sure what to wear? Want to be the talk of the sea? DODO Aloha Resort Shirts are an expressive way to say \u201CI like to take risks with my wardrobe.\u201D Get one free of charge; available for pickup at the party.", stock: 1 }
   ];
 
+  static TAKEN = { ghost: 1 };
+
   _storeKey = "oms-salvage-claim-v1";
 
   _loadClaim() {
@@ -326,7 +336,7 @@ class Component extends DCLogic {
       const raw = window.localStorage.getItem(this._storeKey);
       if (raw) this.setState({ claim: JSON.parse(raw) });
     } catch (err) {}
-    const led = {};
+    const led = Object.assign({}, Component.TAKEN);
     String(this.props.claimedLedger || "").split(",").forEach((pair) => {
       const [k, v] = pair.split(":").map((s) => (s || "").trim());
       if (k && v) led[k] = parseInt(v, 10) || 0;
@@ -555,15 +565,12 @@ class Component extends DCLogic {
     this._netFrame(0);
     void (e.pod && e.pod.offsetWidth);
     if (e.rail) { e.rail.style.transition = "opacity .35s ease"; e.rail.style.opacity = "1"; }
-    requestAnimationFrame(() => {
+    if (e.pod) e.pod.style.transition = "top .72s cubic-bezier(.34,.86,.3,1)";
+    if (e.rope) e.rope.style.transition = "height .72s cubic-bezier(.34,.86,.3,1)";
+    this._netTimers.push(setTimeout(() => {
       if (!this._navOpen) return;
-      if (e.pod) e.pod.style.transition = "top .72s cubic-bezier(.34,.86,.3,1)";
-      if (e.rope) e.rope.style.transition = "height .72s cubic-bezier(.34,.86,.3,1)";
-      requestAnimationFrame(() => {
-        if (!this._navOpen) return;
-        this._setNet(this._navMetrics().deploy, 0, true);
-      });
-    });
+      this._setNet(this._navMetrics().deploy, 0, true);
+    }, 30));
     [[180, 1], [430, 2]].forEach((pair) => {
       this._netTimers.push(setTimeout(() => this._netFrame(pair[1]), pair[0]));
     });
@@ -683,7 +690,7 @@ class Component extends DCLogic {
   renderVals() {
     const claim = this.state.claim;
     const locked = !!claim;
-    const cardBase = "padding:clamp(24px,5vw,34px) clamp(20px,5vw,30px);display:flex;flex-direction:column;outline:1px solid rgba(143,191,168,.14);transition:opacity .4s ease;";
+    const cardBase = "position:relative;overflow:hidden;padding:clamp(24px,5vw,34px) clamp(20px,5vw,30px);display:flex;flex-direction:column;outline:1px solid rgba(143,191,168,.14);transition:opacity .4s ease;";
     let totalLeft = 0;
     const prizes = Component.PRIZES.map((p) => {
       const left = this._remaining(p);
@@ -699,7 +706,9 @@ class Component extends DCLogic {
         line: p.line,
         tagColor: lit ? "#8fbfa8" : out ? "#6d8f88" : "#c8352c",
         remainLabel: mine ? "Yours" : staged ? "In your RSVP" : out ? "Gone" : left > 1 ? left + " of " + p.stock + " left" : "One only",
-        cardStyle: cardBase + "background:" + (lit ? "#132f38" : dim ? "#071319" : "#08202a") + ";" + (dim ? "opacity:.5;" : "") + (lit ? "box-shadow:inset 0 0 0 1px rgba(143,191,168,.45);" : ""),
+        swornOut: out,
+        lineStyle: "margin:0 0 20px;font-size:15px;line-height:1.6;color:#a9c2b8;text-wrap:pretty;" + (out ? "opacity:.28;" : ""),
+        cardStyle: cardBase + "background:" + (lit ? "#132f38" : dim ? "#071319" : "#08202a") + ";" + (dim && !out ? "opacity:.5;" : "") + (lit ? "box-shadow:inset 0 0 0 1px rgba(143,191,168,.45);" : ""),
         disabled: out || locked,
         btnLabel: mine ? "Held for you" : staged ? "Selected below ↓" : out ? "Claimed" : "Claim it",
         btnStyle: "margin-top:auto;width:100%;padding:16px 18px;min-height:52px;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.26em;text-transform:uppercase;cursor:" + (out || locked ? "default" : "pointer") + ";background:" + (lit ? "rgba(143,191,168,.14)" : out || locked ? "transparent" : "#c8352c") + ";border:1px solid " + (lit ? "rgba(143,191,168,.5)" : out || locked ? "rgba(143,191,168,.2)" : "#e0554a") + ";color:" + (lit ? "#cfe3d6" : out || locked ? "#6d8f88" : "#f3ece0") + ";",

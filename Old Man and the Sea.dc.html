@@ -131,7 +131,7 @@ html{scroll-behavior:smooth;}
       </div>
       <div class="rv" style="background:#081c22;padding:clamp(24px,5vw,34px) clamp(20px,5vw,30px);">
         <p style="margin: 0 0 12px; font-family: 'Courier New',monospace; font-size: 18px; letter-spacing: .3em; text-transform: uppercase; color: #c8352c">Where</p>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#b7cdc2;"><span style="color: rgb(109, 143, 136); font-family: &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 2.42px; text-transform: uppercase; background-color: rgb(7, 26, 32);">34°55.5′ N / 82°26.9′ W&nbsp;</span><br>15 Circle Dr. Greenville, SC</p>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:#b7cdc2;">Location to be disclosed after RSVP… assuming you aren’t like a serial killer or something.</p>
       </div>
       <div class="rv" style="background:#081c22;padding:clamp(24px,5vw,34px) clamp(20px,5vw,30px);">
         <p style="margin: 0 0 12px; font-family: 'Courier New',monospace; font-size: 19px; letter-spacing: .3em; text-transform: uppercase; color: #c8352c">What</p>
@@ -250,9 +250,7 @@ html{scroll-behavior:smooth;}
 
     <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
       <div style="border:1px solid rgba(143,191,168,.3);background:#081c22;padding:clamp(34px,5vw,60px);text-align:center;">
-        <p style="margin:0 0 14px;font-family:'Tuscany',Georgia,serif;font-size:clamp(26px,4vw,44px);line-height:1.2;color:#e6efe6;">Your name is in the log.</p>
-        <p style="margin:0 0 20px;font-size:17px;line-height:1.66;color:#a9c2b8;">Your message to the old man is open and written. Send it and you're aboard — if nothing opened, <a href="{{ smsHref }}" style="color:#c8352c;">tap here</a>.</p>
-        <p style="margin:0;font-family:'Courier New',monospace;font-size:12px;letter-spacing:.14em;line-height:1.7;color:#6d8f88;">The port of call arrives by text one week prior. Until then, keep your back to the water.</p>
+        <p style="margin:0;font-family:'Tuscany',Georgia,serif;font-size:clamp(26px,4vw,44px);line-height:1.2;color:#e6efe6;">Traitor Quoth is expecting you.</p>
       </div>
     </sc-if>
 
@@ -327,7 +325,7 @@ class Component extends DCLogic {
     { id: "shirt", name: "Dodo Aloha resort shirt", line: "Not sure what to wear? Want to be the talk of the sea? DODO Aloha Resort Shirts are an expressive way to say \u201CI like to take risks with my wardrobe.\u201D Get one free of charge; available for pickup at the party.", stock: 1 }
   ];
 
-  static TAKEN = { ghost: 1, cthulhu: 1, shirt: 1 };
+  static TAKEN = { ghost: 1, cthulhu: 1, shirt: 1, harpoon: 1, marlinspike: 1, tribal: 2 };
 
   _storeKey = "oms-salvage-claim-v1";
 
